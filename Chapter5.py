@@ -1,14 +1,25 @@
-def makeKeyDecisionsDuringMatch():
-    print("Chapter 5: The World Stage - FIFA World Cup...")
-    print("This is it—the final match in the World Cup. You need to make key decisions.")
+class Chapter5:
+    def makeKeyDecisionsDuringMatch(self):
+        print("\nChapter 5: The World Stage - FIFA World Cup...")
+        print("The final match is about to begin. You’re in a crucial position on the field and must make a decision.")
 
-    action = input("You are in a critical position. Do you: 1. Pass the ball 2. Shoot for goal 3. Wait for support: ")
-    if action == '1':
-        print("You pass the ball to a teammate who scores! Great team effort!")
-        return True  # Success
-    elif action == '2':
-        print("You shoot and score! The crowd erupts in cheers!")
-        return True  # Success
-    else:
-        print("You decide to wait. The support comes and the team scores a great goal!")
-        return True  # Success
+        # Multiple Choice Question
+        print("\nYou have the ball in front of the goal. What do you do?")
+        print("1. Pass to a teammate who is in a better position")
+        print("2. Shoot for the goal and take the risk")
+        print("3. Wait for the goalkeeper to come closer and then shoot")
+        print("4. Dribble around the defense")
+
+        while True:
+            answer = input("Choose the correct option (1-4): ")
+            if answer == "1":
+                print("\nGreat decision! The teammate scores a beautiful goal!")
+                return True  # Success, game over
+            elif answer == "2":
+                print("\nYou shoot, but the goalkeeper saves it. It wasn’t the best choice.")
+            elif answer == "3":
+                print("\nYou waited too long, and the chance is lost. The goalkeeper caught up.")
+            elif answer == "4":
+                print("\nYou try to dribble but lose possession. The defense takes control.")
+            else:
+                print("\nInvalid input. Please choose a number between 1 and 4.")
